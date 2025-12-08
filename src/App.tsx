@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
+import { ChatSupport } from "./components/ChatSupport";
 import Index from "./pages/Index";
 import Checkout from "./pages/Checkout";
 import Shop from "./pages/Shop";
@@ -38,6 +39,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <ChatSupport />
         </BrowserRouter>
       </TooltipProvider>
     </CartProvider>
