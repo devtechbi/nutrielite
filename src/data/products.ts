@@ -1,11 +1,61 @@
-import wheyProtein from "@/assets/products/whey-protein.png";
-import creatine from "@/assets/products/creatine.png";
-import bcaa from "@/assets/products/bcaa.png";
-import preWorkout from "@/assets/products/pre-workout.png";
-import massGainer from "@/assets/products/mass-gainer.png";
-import eaa from "@/assets/products/eaa.png";
-import shaker from "@/assets/products/shaker.png";
-import wheyBlend from "@/assets/products/whey-blend.png";
+// Product images - unique for each product
+import wheyIsolate from "@/assets/products/whey-isolate.png";
+import wheyBlendNew from "@/assets/products/whey-blend-new.png";
+import goldStandardWhey from "@/assets/products/gold-standard-whey.png";
+import hydroWhey from "@/assets/products/hydro-whey.png";
+import caseinProtein from "@/assets/products/casein-protein.png";
+import plantProtein from "@/assets/products/plant-protein.png";
+import eggProtein from "@/assets/products/egg-protein.png";
+import beefProtein from "@/assets/products/beef-protein.png";
+import isoWheyZero from "@/assets/products/iso-whey-zero.png";
+import wheyConcentrate from "@/assets/products/whey-concentrate.png";
+import dietWhey from "@/assets/products/diet-whey.png";
+import nitroTech from "@/assets/products/nitro-tech.png";
+import syntha6 from "@/assets/products/syntha-6.png";
+import combatProtein from "@/assets/products/combat-protein.png";
+import proGainer from "@/assets/products/pro-gainer.png";
+
+// Creatine images
+import creatineMono from "@/assets/products/creatine-mono.png";
+import creatineHcl from "@/assets/products/creatine-hcl.png";
+import creatineCaps from "@/assets/products/creatine-caps.png";
+import creatineBlend from "@/assets/products/creatine-blend.png";
+import creapure from "@/assets/products/creapure.png";
+import creatineGummies from "@/assets/products/creatine-gummies.png";
+
+// Pre-workout images
+import preworkoutExtreme from "@/assets/products/preworkout-extreme.png";
+import c4Preworkout from "@/assets/products/c4-preworkout.png";
+import preworkoutStimfree from "@/assets/products/preworkout-stimfree.png";
+import pumpSurge from "@/assets/products/pump-surge.png";
+import totalWar from "@/assets/products/total-war.png";
+import ghostLegend from "@/assets/products/ghost-legend.png";
+
+// Amino acids images
+import bcaa211 from "@/assets/products/bcaa-211.png";
+import eaaEssential from "@/assets/products/eaa-essential.png";
+import glutamine from "@/assets/products/glutamine.png";
+import citrulline from "@/assets/products/citrulline.png";
+import bcaaEnergy from "@/assets/products/bcaa-energy.png";
+import aminoComplete from "@/assets/products/amino-complete.png";
+
+// Gainer images
+import massGainerNew from "@/assets/products/mass-gainer-new.png";
+import seriousMass from "@/assets/products/serious-mass.png";
+import leanGainer from "@/assets/products/lean-gainer.png";
+import superMass from "@/assets/products/super-mass.png";
+import trueMass from "@/assets/products/true-mass.png";
+import carboGain from "@/assets/products/carbo-gain.png";
+
+// Accessories images
+import shakerPremium from "@/assets/products/shaker-premium.png";
+import gymGloves from "@/assets/products/gym-gloves.png";
+import liftingBelt from "@/assets/products/lifting-belt.png";
+import wristWraps from "@/assets/products/wrist-wraps.png";
+import kneeSleeves from "@/assets/products/knee-sleeves.png";
+import resistanceBands from "@/assets/products/resistance-bands.png";
+import gymBag from "@/assets/products/gym-bag.png";
+import foamRoller from "@/assets/products/foam-roller.png";
 
 // Category images
 import proteinCat from "@/assets/categories/protein.png";
@@ -47,7 +97,7 @@ export const products: Product[] = [
     originalPrice: 3499,
     rating: 4.8,
     reviews: 1250,
-    image: wheyProtein,
+    image: wheyIsolate,
     isNew: true,
     category: "Protein",
     description: "100% pure whey protein isolate with 27g protein per serving. Lab-tested and amino-spike free.",
@@ -66,7 +116,7 @@ export const products: Product[] = [
     originalPrice: 4299,
     rating: 4.7,
     reviews: 720,
-    image: wheyBlend,
+    image: wheyBlendNew,
     category: "Protein",
     description: "Premium blend of whey concentrate and isolate with 24g protein per serving.",
     sizes: ["1kg", "2kg", "5kg"],
@@ -84,7 +134,7 @@ export const products: Product[] = [
     originalPrice: 3999,
     rating: 4.9,
     reviews: 2100,
-    image: wheyProtein,
+    image: goldStandardWhey,
     tag: "Bestseller",
     category: "Protein",
     description: "The world's best-selling whey protein powder with 24g of premium protein per serving.",
@@ -103,7 +153,7 @@ export const products: Product[] = [
     originalPrice: 4499,
     rating: 4.8,
     reviews: 580,
-    image: wheyProtein,
+    image: hydroWhey,
     isNew: true,
     category: "Protein",
     description: "Ultra-fast absorbing hydrolyzed whey for rapid muscle recovery.",
@@ -121,7 +171,7 @@ export const products: Product[] = [
     originalPrice: 3599,
     rating: 4.6,
     reviews: 420,
-    image: wheyBlend,
+    image: caseinProtein,
     category: "Protein",
     description: "Slow-release protein for overnight muscle recovery and growth.",
     sizes: ["1kg", "2kg"],
@@ -138,7 +188,7 @@ export const products: Product[] = [
     originalPrice: 2799,
     rating: 4.5,
     reviews: 380,
-    image: wheyBlend,
+    image: plantProtein,
     tag: "Vegan",
     category: "Protein",
     description: "Complete plant protein from pea, rice, and hemp with all essential amino acids.",
@@ -157,7 +207,7 @@ export const products: Product[] = [
     originalPrice: 2999,
     rating: 4.7,
     reviews: 290,
-    image: wheyProtein,
+    image: eggProtein,
     category: "Protein",
     description: "Pure egg white protein with complete amino acid profile for lean muscle.",
     sizes: ["500g", "1kg"],
@@ -174,7 +224,7 @@ export const products: Product[] = [
     originalPrice: 3499,
     rating: 4.4,
     reviews: 180,
-    image: wheyProtein,
+    image: beefProtein,
     category: "Protein",
     description: "High-quality beef protein isolate with 25g protein and zero fat per serving.",
     sizes: ["900g", "1.8kg"],
@@ -191,7 +241,7 @@ export const products: Product[] = [
     originalPrice: 3799,
     rating: 4.8,
     reviews: 920,
-    image: wheyProtein,
+    image: isoWheyZero,
     isNew: true,
     category: "Protein",
     description: "Zero sugar, zero fat whey isolate with added digestive enzymes.",
@@ -209,7 +259,7 @@ export const products: Product[] = [
     originalPrice: 1999,
     rating: 4.5,
     reviews: 1450,
-    image: wheyBlend,
+    image: wheyConcentrate,
     tag: "Value Pack",
     category: "Protein",
     description: "Affordable whey concentrate with 22g protein per serving.",
@@ -228,7 +278,7 @@ export const products: Product[] = [
     originalPrice: 2899,
     rating: 4.6,
     reviews: 670,
-    image: wheyProtein,
+    image: dietWhey,
     category: "Protein",
     description: "Low-calorie whey with L-Carnitine and Green Tea Extract for weight management.",
     sizes: ["900g", "1.8kg"],
@@ -245,7 +295,7 @@ export const products: Product[] = [
     originalPrice: 4999,
     rating: 4.7,
     reviews: 340,
-    image: wheyBlend,
+    image: proGainer,
     category: "Protein",
     description: "High-protein weight gainer with 60g protein and complex carbs per serving.",
     sizes: ["2.27kg", "4.54kg"],
@@ -262,7 +312,7 @@ export const products: Product[] = [
     originalPrice: 4199,
     rating: 4.8,
     reviews: 1120,
-    image: wheyProtein,
+    image: nitroTech,
     tag: "Premium",
     category: "Protein",
     description: "Performance whey with peptides and creatine for maximum muscle gains.",
@@ -280,7 +330,7 @@ export const products: Product[] = [
     originalPrice: 3599,
     rating: 4.9,
     reviews: 890,
-    image: wheyBlend,
+    image: syntha6,
     category: "Protein",
     description: "Multi-functional protein matrix with slow and fast releasing proteins.",
     sizes: ["1.32kg", "2.27kg", "4.54kg"],
@@ -298,7 +348,7 @@ export const products: Product[] = [
     originalPrice: 3099,
     rating: 4.6,
     reviews: 560,
-    image: wheyProtein,
+    image: combatProtein,
     category: "Protein",
     description: "Fast-digesting whey protein with 25g protein per serving.",
     sizes: ["907g", "2.27kg"],
@@ -317,7 +367,7 @@ export const products: Product[] = [
     originalPrice: 1299,
     rating: 4.9,
     reviews: 890,
-    image: creatine,
+    image: creatineMono,
     tag: "Bestseller",
     category: "Creatine",
     description: "Micronized creatine monohydrate for enhanced strength and muscle performance.",
@@ -336,7 +386,7 @@ export const products: Product[] = [
     originalPrice: 1799,
     rating: 4.7,
     reviews: 420,
-    image: creatine,
+    image: creatineHcl,
     isNew: true,
     category: "Creatine",
     description: "Highly soluble creatine hydrochloride for better absorption with no bloating.",
@@ -354,7 +404,7 @@ export const products: Product[] = [
     originalPrice: 1999,
     rating: 4.5,
     reviews: 280,
-    image: creatine,
+    image: creatineCaps,
     category: "Creatine",
     description: "Advanced creatine formula for enhanced uptake and muscle cell volumization.",
     sizes: ["120 caps", "240 caps"],
@@ -371,7 +421,7 @@ export const products: Product[] = [
     originalPrice: 2299,
     rating: 4.6,
     reviews: 340,
-    image: creatine,
+    image: creatineBlend,
     tag: "Premium",
     category: "Creatine",
     description: "Multi-form creatine blend with monohydrate, HCL, and buffered creatine.",
@@ -389,7 +439,7 @@ export const products: Product[] = [
     originalPrice: 1599,
     rating: 4.9,
     reviews: 720,
-    image: creatine,
+    image: creapure,
     tag: "Pure",
     category: "Creatine",
     description: "Premium German-made Creapure® creatine monohydrate for maximum purity.",
@@ -407,7 +457,7 @@ export const products: Product[] = [
     originalPrice: 1399,
     rating: 4.4,
     reviews: 180,
-    image: creatine,
+    image: creatineGummies,
     isNew: true,
     category: "Creatine",
     description: "Convenient creatine gummies with great taste. 3g creatine per serving.",
@@ -427,7 +477,7 @@ export const products: Product[] = [
     originalPrice: 2199,
     rating: 4.6,
     reviews: 420,
-    image: preWorkout,
+    image: preworkoutExtreme,
     isNew: true,
     category: "Pre-Workout",
     description: "Explosive energy formula with caffeine, beta-alanine, and citrulline malate.",
@@ -445,7 +495,7 @@ export const products: Product[] = [
     originalPrice: 2499,
     rating: 4.7,
     reviews: 1250,
-    image: preWorkout,
+    image: c4Preworkout,
     tag: "Bestseller",
     category: "Pre-Workout",
     description: "America's #1 selling pre-workout with explosive energy and focus.",
@@ -463,7 +513,7 @@ export const products: Product[] = [
     originalPrice: 1899,
     rating: 4.5,
     reviews: 320,
-    image: preWorkout,
+    image: preworkoutStimfree,
     category: "Pre-Workout",
     description: "Caffeine-free pump formula for intense workouts without stimulants.",
     sizes: ["250g", "500g"],
@@ -480,7 +530,7 @@ export const products: Product[] = [
     originalPrice: 2399,
     rating: 4.8,
     reviews: 580,
-    image: preWorkout,
+    image: pumpSurge,
     tag: "Pump",
     category: "Pre-Workout",
     description: "Maximum nitric oxide booster for insane muscle pumps and vascularity.",
@@ -498,7 +548,7 @@ export const products: Product[] = [
     originalPrice: 2899,
     rating: 4.9,
     reviews: 890,
-    image: preWorkout,
+    image: totalWar,
     isNew: true,
     category: "Pre-Workout",
     description: "High-stimulant pre-workout for extreme energy and intense focus.",
@@ -516,7 +566,7 @@ export const products: Product[] = [
     originalPrice: 3199,
     rating: 4.8,
     reviews: 670,
-    image: preWorkout,
+    image: ghostLegend,
     tag: "Premium",
     category: "Pre-Workout",
     description: "Legendary pre-workout with premium ingredients and iconic flavors.",
@@ -536,7 +586,7 @@ export const products: Product[] = [
     originalPrice: 1799,
     rating: 4.7,
     reviews: 650,
-    image: bcaa,
+    image: bcaa211,
     category: "Amino Acids",
     description: "Optimal 2:1:1 ratio of Leucine, Isoleucine, and Valine for muscle recovery.",
     sizes: ["250g", "500g"],
@@ -553,7 +603,7 @@ export const products: Product[] = [
     originalPrice: 1599,
     rating: 4.8,
     reviews: 290,
-    image: eaa,
+    image: eaaEssential,
     tag: "Limited",
     category: "Amino Acids",
     description: "Complete essential amino acids formula for optimal muscle protein synthesis.",
@@ -571,7 +621,7 @@ export const products: Product[] = [
     originalPrice: 1099,
     rating: 4.6,
     reviews: 480,
-    image: bcaa,
+    image: glutamine,
     category: "Amino Acids",
     description: "Pure L-Glutamine for enhanced recovery and immune support.",
     sizes: ["250g", "500g", "1kg"],
@@ -589,7 +639,7 @@ export const products: Product[] = [
     originalPrice: 1399,
     rating: 4.7,
     reviews: 340,
-    image: eaa,
+    image: citrulline,
     category: "Amino Acids",
     description: "Pure citrulline malate for enhanced blood flow and endurance.",
     sizes: ["200g", "400g"],
@@ -606,7 +656,7 @@ export const products: Product[] = [
     originalPrice: 1999,
     rating: 4.5,
     reviews: 420,
-    image: bcaa,
+    image: bcaaEnergy,
     isNew: true,
     category: "Amino Acids",
     description: "BCAAs combined with natural caffeine and green tea for energy and recovery.",
@@ -624,7 +674,7 @@ export const products: Product[] = [
     originalPrice: 2299,
     rating: 4.8,
     reviews: 310,
-    image: eaa,
+    image: aminoComplete,
     tag: "Premium",
     category: "Amino Acids",
     description: "Full spectrum amino acid complex with EAAs, BCAAs, and recovery agents.",
@@ -644,7 +694,7 @@ export const products: Product[] = [
     originalPrice: 3999,
     rating: 4.5,
     reviews: 380,
-    image: massGainer,
+    image: massGainerNew,
     category: "Gainers",
     description: "High-calorie mass gainer with 50g protein and 750 calories per serving.",
     sizes: ["1kg", "3kg", "5kg"],
@@ -662,7 +712,7 @@ export const products: Product[] = [
     originalPrice: 6499,
     rating: 4.7,
     reviews: 920,
-    image: massGainer,
+    image: seriousMass,
     tag: "Bestseller",
     category: "Gainers",
     description: "Ultimate weight gainer with 1250 calories and 50g protein per serving.",
@@ -680,7 +730,7 @@ export const products: Product[] = [
     originalPrice: 3299,
     rating: 4.6,
     reviews: 450,
-    image: massGainer,
+    image: leanGainer,
     category: "Gainers",
     description: "Clean mass gainer with low sugar, high protein, and complex carbs.",
     sizes: ["1.5kg", "3kg"],
@@ -697,7 +747,7 @@ export const products: Product[] = [
     originalPrice: 4499,
     rating: 4.4,
     reviews: 280,
-    image: massGainer,
+    image: superMass,
     category: "Gainers",
     description: "High-calorie formula with 1280 calories and 52g protein per serving.",
     sizes: ["2.7kg", "5.4kg"],
@@ -714,7 +764,7 @@ export const products: Product[] = [
     originalPrice: 5499,
     rating: 4.8,
     reviews: 560,
-    image: massGainer,
+    image: trueMass,
     tag: "Premium",
     category: "Gainers",
     description: "Premium mass gainer with multi-phase protein and complex carbs.",
@@ -732,7 +782,7 @@ export const products: Product[] = [
     originalPrice: 1799,
     rating: 4.3,
     reviews: 190,
-    image: massGainer,
+    image: carboGain,
     category: "Gainers",
     description: "Pure complex carbohydrate powder for clean energy and mass gains.",
     sizes: ["1kg", "2.5kg", "5kg"],
@@ -752,7 +802,7 @@ export const products: Product[] = [
     originalPrice: 599,
     rating: 4.9,
     reviews: 1100,
-    image: shaker,
+    image: shakerPremium,
     category: "Accessories",
     description: "Leak-proof premium shaker with mixing ball and measurement markings.",
     sizes: ["500ml", "700ml"],
@@ -768,7 +818,7 @@ export const products: Product[] = [
     originalPrice: 899,
     rating: 4.7,
     reviews: 580,
-    image: shaker,
+    image: gymGloves,
     category: "Accessories",
     description: "Breathable leather gym gloves with wrist support for heavy lifting.",
     sizes: ["S", "M", "L", "XL"],
@@ -786,7 +836,7 @@ export const products: Product[] = [
     originalPrice: 2199,
     rating: 4.8,
     reviews: 420,
-    image: shaker,
+    image: liftingBelt,
     tag: "Premium",
     category: "Accessories",
     description: "Premium genuine leather weightlifting belt for maximum core support.",
@@ -805,7 +855,7 @@ export const products: Product[] = [
     originalPrice: 499,
     rating: 4.6,
     reviews: 340,
-    image: shaker,
+    image: wristWraps,
     category: "Accessories",
     description: "Professional grade wrist wraps for bench press and overhead movements.",
     sizes: ["18 inch", "24 inch"],
@@ -821,7 +871,7 @@ export const products: Product[] = [
     originalPrice: 1299,
     rating: 4.7,
     reviews: 290,
-    image: shaker,
+    image: kneeSleeves,
     category: "Accessories",
     description: "7mm neoprene knee sleeves for squats and powerlifting.",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -840,7 +890,7 @@ export const products: Product[] = [
     originalPrice: 1199,
     rating: 4.5,
     reviews: 450,
-    image: shaker,
+    image: resistanceBands,
     isNew: true,
     category: "Accessories",
     description: "5-piece resistance band set with different resistance levels.",
@@ -856,7 +906,7 @@ export const products: Product[] = [
     originalPrice: 1799,
     rating: 4.8,
     reviews: 380,
-    image: shaker,
+    image: gymBag,
     category: "Accessories",
     description: "Spacious gym bag with shoe compartment and wet pocket.",
     sizes: ["40L", "60L"],
@@ -872,7 +922,7 @@ export const products: Product[] = [
     originalPrice: 999,
     rating: 4.6,
     reviews: 320,
-    image: shaker,
+    image: foamRoller,
     category: "Accessories",
     description: "Textured foam roller for muscle recovery and myofascial release.",
     sizes: ["12 inch", "18 inch", "36 inch"],
