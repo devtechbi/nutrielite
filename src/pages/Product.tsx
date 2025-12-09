@@ -7,8 +7,13 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Heart, Star, ChevronRight, Minus, Plus, Shield, Truck, RotateCcw } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import { useToast } from "@/hooks/use-toast";
+import useScrollToTop from "@/hooks/useScrollToTop";
+
+const MAX_QUANTITY = 50;
 
 const Product = () => {
+  useScrollToTop();
+  
   const { id } = useParams();
   const { toast } = useToast();
   const { addItem } = useCart();
@@ -38,6 +43,21 @@ const Product = () => {
   const displayPrice = currentPricing?.price || product.price;
   const displayOriginalPrice = currentPricing?.originalPrice || product.originalPrice;
   const discount = displayOriginalPrice ? Math.round(((displayOriginalPrice - displayPrice) / displayOriginalPrice) * 100) : 0;
+
+  const handleQuantityChange = (newQuantity: number) => {
+    if (newQuantity < 1) {
+      setQuantity(1);
+    } else if (newQuantity > MAX_QUANTITY) {
+      setQuantity(MAX_QUANTITY);
+      toast({ 
+        title: "Maximum Limit Reached", 
+        description: `You can add a maximum of ${MAX_QUANTITY} units per product.`,
+        variant: "destructive"
+      });
+    } else {
+      setQuantity(newQuantity);
+    }
+  };
 
   const handleAddToCart = () => {
     const size = selectedSize || product.sizes?.[0] || "Standard";
@@ -127,12 +147,12 @@ const Product = () => {
               )}
 
               <div className="mb-8">
-                <label className="font-body font-medium text-foreground block mb-3">Quantity</label>
+                <label className="font-body font-medium text-foreground block mb-3">Quantity <span className="text-muted-foreground text-sm">(Max: {MAX_QUANTITY})</span></label>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center bg-secondary rounded-lg">
-                    <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="p-3 hover:text-gold transition-colors"><Minus className="h-5 w-5" /></button>
+                    <button onClick={() => handleQuantityChange(quantity - 1)} className="p-3 hover:text-gold transition-colors"><Minus className="h-5 w-5" /></button>
                     <span className="px-6 font-body font-semibold text-foreground">{quantity}</span>
-                    <button onClick={() => setQuantity(quantity + 1)} className="p-3 hover:text-gold transition-colors"><Plus className="h-5 w-5" /></button>
+                    <button onClick={() => handleQuantityChange(quantity + 1)} className="p-3 hover:text-gold transition-colors"><Plus className="h-5 w-5" /></button>
                   </div>
                 </div>
               </div>
