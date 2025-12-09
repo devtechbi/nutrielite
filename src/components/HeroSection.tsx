@@ -1,10 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Award, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroProduct from "@/assets/hero-product.png";
+import watermarkPattern from "@/assets/watermark-pattern.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-hero overflow-hidden pt-20">
+      {/* Watermark Background */}
+      <div 
+        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+        style={{
+          backgroundImage: `url(${watermarkPattern})`,
+          backgroundSize: '400px 400px',
+          backgroundRepeat: 'repeat',
+        }}
+      />
+
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gold/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold/5 rounded-full blur-3xl animate-float delay-500" />
@@ -64,8 +76,12 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-gold opacity-20 blur-3xl rounded-full animate-pulse-gold" />
                 <div className="relative z-10 h-full w-full flex items-center justify-center">
                   <div className="glass rounded-3xl p-8 w-full h-full flex flex-col items-center justify-center shadow-card">
-                    <div className="w-32 h-32 bg-gradient-gold rounded-2xl flex items-center justify-center mb-6 animate-float">
-                      <span className="font-display text-5xl font-bold text-primary-foreground">N</span>
+                    <div className="w-48 h-48 mb-6 animate-float overflow-hidden rounded-2xl">
+                      <img 
+                        src={heroProduct} 
+                        alt="Premium Whey Protein" 
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     <h3 className="font-display text-2xl text-foreground mb-2">Premium Whey</h3>
                     <p className="text-muted-foreground font-body mb-4">100% Authentic</p>

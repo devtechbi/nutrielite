@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
+export const MAX_QUANTITY_PER_ITEM = 50;
+
 export interface CartItem {
   id: string;
   name: string;
@@ -41,11 +43,12 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       if (existingIndex > -1) {
         const updated = [...prev];
-        updated[existingIndex].quantity += newItem.quantity;
+        const newQuantity = updated[existingIndex].quantity + newItem.quantity;
+        updated[existingIndex].quantity = Math.min(newQuantity, MAX_QUANTITY_PER_ITEM);
         return updated;
       }
       
-      return [...prev, newItem];
+      return [...prev, { ...newItem, quantity: Math.min(newItem.quantity, MAX_QUANTITY_PER_ITEM) }];
     });
   };
 
@@ -61,10 +64,12 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return;
     }
     
+    const clampedQuantity = Math.min(quantity, MAX_QUANTITY_PER_ITEM);
+    
     setItems((prev) =>
       prev.map((item) =>
         item.id === id && item.size === size && item.flavor === flavor
-          ? { ...item, quantity }
+          ? { ...item, quantity: clampedQuantity }
           : item
       )
     );

@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Menu, X, User, Search } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import SearchModal from "./SearchModal";
+import ThemeToggle from "./ThemeToggle";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +29,8 @@ const Navbar = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="font-display font-bold text-primary-foreground text-xl">N</span>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src={logo} alt="NutriElite Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-display text-2xl font-semibold text-foreground">
                 Nutri<span className="text-gold">Elite</span>
@@ -49,10 +51,11 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-2">
               <Button variant="ghost" size="icon" onClick={() => setSearchOpen(true)}>
                 <Search className="h-5 w-5" />
               </Button>
+              <ThemeToggle />
               <Link to="/profile">
                 <Button variant="ghost" size="icon">
                   <User className="h-5 w-5" />
@@ -70,9 +73,12 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <button className="lg:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            <div className="flex items-center gap-2 lg:hidden">
+              <ThemeToggle />
+              <button className="text-foreground" onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
 
           {isOpen && (
