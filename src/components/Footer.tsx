@@ -90,19 +90,28 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground font-body">
-                  123 Fitness Street, Mumbai, Maharashtra 400001, India
+                  New Delhi, Delhi 110096, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold flex-shrink-0" />
-                <span className="text-muted-foreground font-body">+91 98765 43210</span>
+                <span className="text-muted-foreground font-body">+91-9990055405</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gold flex-shrink-0" />
-                <span className="text-muted-foreground font-body">support@nutrielite.in</span>
+                <span className="text-muted-foreground font-body">devtechbi19@gmail.com</span>
               </li>
             </ul>
-            <Button variant="premium" className="mt-6 w-full">
+            <a
+              href="https://wa.me/919990055405"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,40%)] text-white px-4 py-3 rounded-xl font-body font-semibold transition-colors"
+            >
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp Chat
+            </a>
+            <Button variant="premium" className="mt-3 w-full">
               <MessageCircle className="h-4 w-4" />
               24/7 Chat Support
             </Button>
